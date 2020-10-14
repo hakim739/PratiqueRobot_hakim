@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20201008 12:28:59.903" rpa="false">
+<suite id="s1" name="SetupTeardown" source="C:\Users\Administrator\robot-practice\SetupTeardown">
+<suite id="s1-s1" name="TestSuit" source="C:\Users\Administrator\robot-practice\SetupTeardown\TestSuit">
+<suite id="s1-s1-s1" name="TestSuit1" source="C:\Users\Administrator\robot-practice\SetupTeardown\TestSuit\TestSuit1.robot">
+<test id="s1-s1-s1-t1" name="TC-002">
+<kw name="start browser and maximaze" library="Ressource1" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20201008 12:29:01.312" level="INFO">Opening browser 'gc' to base url 'https://opensource-demo.orangehrmlive.com/index.php/dashboard'.</msg>
+<status status="PASS" starttime="20201008 12:29:01.309" endtime="20201008 12:29:08.669"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201008 12:29:08.670" endtime="20201008 12:29:10.926"></status>
+</kw>
+<status status="PASS" starttime="20201008 12:29:01.304" endtime="20201008 12:29:10.929"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtUsername</arg>
+<arg>Admin</arg>
+</arguments>
+<msg timestamp="20201008 12:29:10.937" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20201008 12:29:10.931" endtime="20201008 12:29:11.415"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtPassword</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20201008 12:29:11.419" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
+<msg timestamp="20201008 12:29:11.601" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20201008 12:29:11.823" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20201008 12:29:11.417" endtime="20201008 12:29:11.824"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=btnLogin</arg>
+</arguments>
+<msg timestamp="20201008 12:29:11.828" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<status status="PASS" starttime="20201008 12:29:11.826" endtime="20201008 12:29:14.817"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Dashboard</arg>
+</arguments>
+<msg timestamp="20201008 12:29:14.964" level="INFO">Current page contains text 'Dashboard'.</msg>
+<status status="PASS" starttime="20201008 12:29:14.820" endtime="20201008 12:29:14.965"></status>
+</kw>
+<kw name="get page title and close browser" library="Ressource1" type="teardown">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20201008 12:29:16.021" level="INFO">${title} = OrangeHRM</msg>
+<status status="PASS" starttime="20201008 12:29:14.968" endtime="20201008 12:29:16.021"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${title}</arg>
+</arguments>
+<status status="PASS" starttime="20201008 12:29:16.023" endtime="20201008 12:29:16.024"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201008 12:29:16.025" endtime="20201008 12:29:19.874"></status>
+</kw>
+<status status="PASS" starttime="20201008 12:29:14.966" endtime="20201008 12:29:19.875"></status>
+</kw>
+<status status="PASS" starttime="20201008 12:29:01.300" endtime="20201008 12:29:19.876" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201008 12:29:00.173" endtime="20201008 12:29:19.881"></status>
+</suite>
+<status status="PASS" starttime="20201008 12:29:00.153" endtime="20201008 12:29:19.894"></status>
+</suite>
+<status status="PASS" starttime="20201008 12:29:00.044" endtime="20201008 12:29:19.902"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="SetupTeardown">SetupTeardown</stat>
+<stat pass="1" fail="0" id="s1-s1" name="TestSuit">SetupTeardown.TestSuit</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="TestSuit1">SetupTeardown.TestSuit.TestSuit1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
